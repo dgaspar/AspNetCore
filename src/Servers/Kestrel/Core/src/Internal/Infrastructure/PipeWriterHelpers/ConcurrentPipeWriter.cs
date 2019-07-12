@@ -13,7 +13,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.PipeW
     /// <summary>
     /// Wraps a PipeWriter so you can start appending more data to the pipe prior to the previous flush completing.
     /// </summary>
-    internal class ConcurrentPipeWriter : PipeWriter
+    internal sealed class ConcurrentPipeWriter : PipeWriter
     {
         // The following constants were copied from https://github.com/dotnet/corefx/blob/de3902bb56f1254ec1af4bf7d092fc2c048734cc/src/System.IO.Pipelines/src/System/IO/Pipelines/StreamPipeWriter.cs
         // and the associated StreamPipeWriterOptions defaults.
